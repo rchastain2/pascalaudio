@@ -452,6 +452,7 @@ begin
   if not (ReadHeader and ReadComments)then
     raise Exception.Create('Invalid Ogg/Opus File');
   ReadPageHeader;
+  GetTotalSamples;
 end;
 
 destructor TOggOpusDecoder.Destroy;
